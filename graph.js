@@ -80,7 +80,11 @@ module.exports = {
     try {
       return await client.api("/me/events").post(data);
     } catch (err) {
+      console.log("here");
       console.log(err);
+      return {
+        error: err,
+      };
     }
   },
   // </CreateEventSnippet>

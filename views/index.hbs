@@ -10,9 +10,47 @@
       <a href="/auth/signin" class="btn btn-primary btn-large">Click here to sign in</a>
     {{/if}}
     {{#if token}}
+    <p>API URL:</p> <a
+      href="https://microsoft-event-creator.herokuapp.com/calendar/api/new">https://microsoft-event-creator.herokuapp.com/calendar/api/new</a>
       <p class="col-md-8 fs-6">
-      token: {{ token }}
+      token: <pre>{{ token }}
+        </pre>
       </p>
+      <div class="alert alert-danger" role="alert">
+        Add the input in x-www-form-urlencoded format to the header of your request.
+        with the key "data" and the value { sample Input }
+      </div>
+      <p>Sample Input:</p>
+      <pre>{
+      "subject": "testing",
+      "body": {
+      "contentType": "HTML",
+      "content": "Does next month work for you?"
+      },
+      "start": {
+      "dateTime": "2019-03-10T12:00:00",
+      "timeZone": "Pacific Standard Time"
+      },
+      "end": {
+      "dateTime": "2019-03-10T14:00:00",
+      "timeZone": "Pacific Standard Time"
+      },
+      "location": {
+      "displayName": "Harry's Bar"
+      },
+      "attendees": [
+      {
+      "emailAddress": {
+      "address": "rockusman4@gmail.com",
+      "name": "Adele Vance"
+      },
+      "type": "required"
+      }
+      ],
+      "isOnlineMeeting": true,
+      "onlineMeetingProvider": "teamsForBusiness"
+      }</pre>
+      
     {{/if}}
   </div>
 </div>
