@@ -11,11 +11,12 @@
     {{/if}}
     {{#if token}}
     <p>API URL:</p> <a
-      href="https://microsoft-event-creator.herokuapp.com/calendar/api/new">https://microsoft-event-creator.herokuapp.com/calendar/api/new</a>
+      href="https://agileitexpert-event-creator.herokuapp.com/calendar/api/new">https://agileitexpert-event-creator.herokuapp.com/calendar/api/new</a>
       <p class="col-md-8 fs-6">
       token: <pre>{{ token }}
         </pre>
       </p>
+      <p class="alert alert-warning">add token with key as authorization in header</p>
       <div class="alert alert-danger" role="alert">
         Add the input in x-www-form-urlencoded format to the header of your request.
         with the key "data" and the value { sample Input }
